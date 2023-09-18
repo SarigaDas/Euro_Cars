@@ -1,0 +1,13 @@
+{% extends 'ind.html' %}
+{% block nav %}
+
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table class="table dark">
+          {{form.as_table}}
+        </table>
+        <div class="text-center">
+            <button class="btn btn-success" type="submit">Add</button>
+        </div>
+      </form>
+{% endblock nav %}
